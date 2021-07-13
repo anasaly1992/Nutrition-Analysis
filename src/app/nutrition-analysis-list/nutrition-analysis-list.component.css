@@ -1,0 +1,12 @@
+ul li span {
+    width: 50px;
+}
+
+ul li .strong {
+    font-weight: bold;
+}
+ul {
+    width: 50%;
+    margin: 50px auto;
+}
+

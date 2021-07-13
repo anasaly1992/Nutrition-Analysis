@@ -1,0 +1,24 @@
+<h1>Nutrition Analysis</h1>
+
+
+
+<form class="form-horizontal" (ngSubmit)="save()" [formGroup]="nutritionForm">
+    <div class="modal-body modal-body-faisal">
+        <div class="row">
+            <div class="col-md-6" style = "display: flex; justify-content: center;">
+                <div class="form-group" *ngIf= "!loader">
+                    <div class="md-form">
+                        <span class="units">note : use one of this units ( pounds, gm, kilo, mg, cloves, tablespoon, teaspoons, cup, cups, inch, oz )</span>
+                        <br>
+                        <span class="units">example : 18 pounds tomato</span>
+                        <textarea type="text" (ngModelChange)="stringToArray($event)" formControlName="ingr" id="form7" class="md-textarea form-control" mdbInput></textarea>
+                        <button type="submit"
+                        [disabled]="nutritionForm.invalid"
+                        class="btn btn-success">Analysis</button>
+                    </div>
+                </div>
+                <img src="../../assets/loader.gif" alt="" *ngIf= "loader"/>
+            </div>
+        </div>
+    </div>
+</form>
